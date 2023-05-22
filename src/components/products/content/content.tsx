@@ -8,6 +8,7 @@ export default function Content({ productsShow ,updateCartItemCount}: IProductsS
     const [cartItems, setCartItems] = useState<IProduct[]>([]);
     updateCartItemCount(cartItems.length);
 
+    // komm
     useEffect(() => {
         const _lsData = JSON.parse(localStorage.getItem("cartItems") as string) ?? [];
         setCartItems(_lsData);
