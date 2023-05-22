@@ -1,0 +1,47 @@
+.productitem {
+    min-width: 1170px;
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        @include flex(row, inherit, inherit);
+        padding: 50px 15px
+    }
+
+    &__img {
+        width: 400px;
+        height: 400px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__info {
+        margin-left: 40px;
+    }
+
+    &__name {
+        @include font(32px, 'Montserrat', 900, black, capitalize, left, 32px);
+    }
+    &__desc{
+        margin-top: 20px;
+        @include font(18px, 'Montserrat', 400, black, inherit, left, 18px);
+    }
+    &__price{
+        @include font(18px, 'Montserrat', 900, black, inherit, left, 18px);
+        margin-top: 20px;
+    }
+
+    &__btn{
+        margin-top: 20px;
+        background-color: #383b47;
+        padding: 10px 15px;
+        border-radius: 8px;
+        @include font(18px, 'Montserrat', 900, white, inherit, left, 18px);
+        cursor: pointer;
+    }
+}

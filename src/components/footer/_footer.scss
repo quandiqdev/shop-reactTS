@@ -1,0 +1,15 @@
+.footer {
+    height: 60px;
+    &__wrapper {
+        background-color: #383b47;
+        padding: 20px;
+        @include flex(row, center, inherit);
+        align-items: center;
+        @include font(20px, 'Montserrat', 400, #fff, capitalize, center, 20px);
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+
+}

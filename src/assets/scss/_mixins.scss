@@ -1,0 +1,28 @@
+@mixin flex($fd,$jc, $fwrap) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    flex-wrap: $fwrap;
+}
+
+@mixin font($fz, $ff, $fw, $c, $tt, $ta, $lh) {
+    font-size: $fz;
+    font-family: $ff;
+    font-weight: $fw;
+    color: $c;
+    text-transform: $tt;
+    text-align: $ta;
+    line-height: $lh;
+}
+
+@mixin bgImg($bi, $br, $bp) {
+    background-image: $bi;
+    background-repeat: $br;
+    background-position: $bp;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}

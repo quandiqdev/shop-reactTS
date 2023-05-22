@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #fcfcfc;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+@import "./reset";
+@import "./vars";
+@import "./fonts";
+@import "./mixins";
+
+@import "../../components/header/header";
+@import "../../components/subheader/subheader";
+@import "../../components/main/main";
+@import "../../components/products/content/content";
+@import "../../components/products/pagination/pagination";
+@import "../../components/productItem/productItem";
+@import "../../components/cart/cart";
+@import "../../components/footer/footer"

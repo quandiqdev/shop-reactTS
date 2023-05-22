@@ -1,0 +1,133 @@
+.header {
+    min-width: 1170px;
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        @include flex(inherit, space-between, inherit);
+        padding: 10px 15px
+    }
+
+    &__logo {
+
+        flex-basis: 15%;
+        @include flex(inherit, left, no-wrap);
+        align-items: center;
+        @include font(24px, 'Bruno Ace SC', 400, black, inherit, left, 20px);
+    }
+
+    &__list {
+        flex-basis: 25%;
+        @include flex(inherit, space-between, inherit);
+        list-style-type: none;
+
+        &-item+&-item {
+            margin-left: 10px;
+        }
+
+        &-item {
+            @include flex(inherit, center, no-wrap);
+            align-items: center;
+            @include font(20px, 'Montserrat', 400, black, inherit, left, 20px);
+
+        }
+    }
+
+    &__search {
+        flex-basis: 30%;
+        position: relative;
+
+        &-input {
+            @include font(14px, 'Montserrat', 400, black, inherit, left, 14px);
+
+            outline: none;
+            border: 1px solid black;
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+
+        &-icon {
+            @include flex(row, center, inherit);
+            align-items: center;
+            font-size: 25px;
+            color: #fff;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 40px;
+            background-color: #383b47;
+            border-radius: 0 5px 5px 0;
+        }
+    }
+
+    &__end {
+        @include flex(inherit, space-between, inherit);
+        flex-basis: 15%;
+
+        &-user {
+
+            @include flex(inherit, space-between, inherit);
+        }
+
+        &-cart {
+            @include flex(inherit, center, no-wrap);
+            align-items: center;
+        }
+
+        &-dataCount {
+            @include flex(inherit, center, no-wrap);
+            align-items: center;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #fff;
+            z-index: 2;
+            border: 1px solid #383b47;
+            height: 20px;
+            width: 15px;
+            @include font(14px, 'Montserrat', 900, #383b47, inherit, center, 14px);
+
+            border-radius: 7px;
+        }
+
+        .cart-icon {
+            position: relative;
+
+            .cart__icon {
+                font-size: 32px;
+            }
+        }
+
+        .user-icon {
+
+            .user__logo {
+                border: 1px solid rgb(0, 0, 0);
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+
+                img {
+                    width: 100%;
+                    height: auto
+                }
+            }
+
+            .user__name {
+                @include flex(inherit, center, no-wrap);
+                align-items: center;
+                margin-left: 10px;
+                @include font(14px, 'Montserrat', 900, black, inherit, left, 14px);
+
+            }
+        }
+    }
+}

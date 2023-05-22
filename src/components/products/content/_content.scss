@@ -1,0 +1,134 @@
+.content {
+  &__wrapper {
+    padding: 20px 10px;
+  }
+
+  &__list {
+    @include flex(inherit, left, wrap);
+    list-style-type: none;
+
+    &-item {
+      flex-basis: 30%;
+      border: 1px solid #979797;
+      margin-left: 56px;
+      margin-top: 20px;
+    }
+
+    &-item:nth-child(3n+1) {
+      margin-left: 0;
+    }
+
+    &-item:nth-child(-n+3) {
+      margin-top: 0px;
+    }
+  }
+
+  .item {
+    @include font(14px, 'Montserrat', 900, black, inherit, left, 14px);
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+    &__wrapper {
+      @include flex(column, inherit, no-wrap);
+      padding: 10px;
+    }
+
+    &__wrapper-inner {
+      margin-top: 20px;
+      @include flex(row, space-between, no-wrap);
+      align-items: center;
+
+      div {
+        @include font(14px, 'Montserrat', 900, black, inherit, left, 14px);
+        padding: 8px 5px;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 300px;
+      transition: all 400ms linear;
+      overflow: hidden;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        transition: all 400ms linear;
+
+        &:hover {
+
+          transform: scale(1.25);
+        }
+      }
+
+    }
+
+
+
+    &__bottom {
+      margin-top: 10px;
+      @include flex(row, right, wrap);
+
+
+
+      .cart__item-btns {
+        @include flex(row, center, inherit);
+        flex-basis: 100%;
+
+        background-color: #fff;
+      }
+
+      .cart__item-minus,
+      .cart__item-plus,
+      .cart__item-amount {
+        @include font(20px, 'Montserrat', 900, #fff, inherit, center, 20px);
+        width: 40px;
+        height: 40px;
+        @include flex(row, center, inherit);
+        align-items: center;
+        background-color: #383b47;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .cart__item-amount {
+        cursor: default;
+        border-radius: 0;
+        background-color: #fff;
+        color: #383b47;
+      }
+
+
+
+      a {
+        flex-basis: 15%;
+      }
+
+      a+a {
+        margin-left: 5px
+      }
+
+      &-btn {
+        @include flex(row, right, inherit);
+        width: 100%;
+
+        button {
+          padding: 10px;
+          width: 100%;
+          height: 100%;
+          background-color: #383b47;
+          border-radius: 5px;
+          border: 1px solid grey;
+          cursor: pointer;
+
+          .item__btn {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
